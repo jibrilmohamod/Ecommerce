@@ -21,7 +21,9 @@
     </li>
     <li class="mr-14">
      <router-link to="/about">
-      <h2 class="text-gray-400 hover:text-black">Women</h2>
+      <h2 class="h-full border border-green-500 text-gray-400 hover:text-black">
+       Women
+      </h2>
      </router-link>
     </li>
     <li class="mr-14">
@@ -49,7 +51,7 @@
      <li class="ml-14">
       <router-link to="/profile"
        ><img
-        class="w-14 border h-14 rounded-full"
+        class="w-14 border h-14 rounded-full hover:border-orange-600 hover:border-2"
         src="../assets/images/image-avatar.png"
         alt=""
       /></router-link>
