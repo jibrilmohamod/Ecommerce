@@ -43,9 +43,9 @@
    <nav class="h-full border">
     <ul class="flex items-center h-full">
      <li>
-      <router-link to="/cart">
+      <button @click="showCart">
        <Icon class="text-2xl" icon="clarity:shopping-cart-line" />
-      </router-link>
+      </button>
      </li>
      <!-- profile image -->
      <li class="ml-14">
@@ -59,11 +59,20 @@
     </ul>
    </nav>
   </div>
+  <!-- cart Widget -->
+  <CartWidget class="absolute right-40 top-28" v-show="cart" />
  </div>
 </template>
 
 <script setup>
  import { Icon } from "@iconify/vue"
+ import { ref } from "vue"
+ import CartWidget from "./cartWidget.vue"
+
+ const cart = ref(false)
+ const showCart = () => {
+  cart.value = !cart.value
+ }
 </script>
 
 <style lang="scss" scoped></style>
