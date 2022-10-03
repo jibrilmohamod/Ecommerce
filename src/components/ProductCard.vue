@@ -53,14 +53,20 @@
       <h2 class="text-gray-400 mt-2 line-through">$250.00</h2>
      </div>
      <!-- add to cart and product counter -->
-     <div class="flex items-center mt-10">
-      <div class="flex items-center gap-2">
-       <button class="border border-gray-400 rounded-md w-10 h-10">
-        <Icon icon="clarity:minus-line" />
+     <div class="flex items-center mt-10 border justify-around">
+      <div class="flex basis-1 items-center gap-2 border border-red-500">
+       <button
+        class="border border-gray-400 rounded-md w-10 h-10 flex items-center justify-center"
+        @click="minusCounter"
+       >
+        <Icon icon="ant-design:minus-outlined" />
        </button>
-       <h2 class="text-2xl font-bold">1</h2>
-       <button class="border border-gray-400 rounded-md w-10 h-10">
-        <Icon icon="clarity:plus-line" />
+       <h2 class="text-2xl font-bold">{{ counter }}</h2>
+       <button
+        class="border border-gray-400 rounded-md w-10 h-10 flex items-center justify-center"
+        @click="addCounter"
+       >
+        <Icon icon="ant-design:plus-outlined" />
        </button>
       </div>
       <button
@@ -75,6 +81,18 @@
  </div>
 </template>
 
-<script setup></script>
+<script setup>
+ import { Icon } from "@iconify/vue"
+ import { ref } from "vue"
+ const counter = ref(0)
+ const addCounter = () => {
+  counter.value++
+ }
+ const minusCounter = () => {
+  if (counter.value > 0) {
+   counter.value--
+  }
+ }
+</script>
 
 <style lang="scss" scoped></style>
