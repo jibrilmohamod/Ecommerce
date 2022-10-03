@@ -45,6 +45,12 @@
      <li>
       <button @click="showCart">
        <Icon class="text-2xl" icon="clarity:shopping-cart-line" />
+       <!-- cart Widget -->
+       <CartWidget
+        v-auto-animate
+        class="absolute right-40 top-28"
+        v-show="cart"
+       />
       </button>
      </li>
      <!-- profile image -->
@@ -59,8 +65,6 @@
     </ul>
    </nav>
   </div>
-  <!-- cart Widget -->
-  <CartWidget class="absolute right-40 top-28" v-show="cart" />
  </div>
 </template>
 
