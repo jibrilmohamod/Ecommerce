@@ -1,7 +1,8 @@
 <template>
  <div>
   <TheNav />
-  <ProductCard />
+  
+  <router-view></router-view>
  </div>
 </template>
 
