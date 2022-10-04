@@ -3,16 +3,13 @@
   <div class="w-9/12 -red-500 h-full m-auto flex">
    <!-- product images -->
    <div class="h-full w-1/2 -fuchsia-600 pt-32">
-    <carousel :items-to-show="1.5">
-     <slide v-for="slide in 5" :key="slide">
-      {{ slide }}
-     </slide>
-
-     <template #addons>
-      <navigation />
-      <pagination />
-     </template>
-    </carousel>
+    <div class="h-1/2 w-full -blue-500">
+     <img
+      :src="`../assets/images/${Image}`"
+      alt=""
+      class="h-full w-full object-cover"
+     />
+    </div>
    </div>
    <!-- product info -->
    <div class="h-full w-1/2 -green-800 -2">
@@ -71,7 +68,7 @@
 <script setup>
  import { Icon } from "@iconify/vue"
  import "vue3-carousel/dist/carousel.css"
- import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
+ //  import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
 
  import { ref } from "vue"
  const counter = ref(0)
@@ -83,7 +80,7 @@
    counter.value--
   }
  }
- const image = ref("image-product-1.jpg")
+ const Image = "image-product-1.jpg"
 </script>
 
 <style lang="scss" scoped></style>
