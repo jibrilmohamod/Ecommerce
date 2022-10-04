@@ -4,30 +4,34 @@
    <!-- product images -->
    <div class="h-full w-1/2 -fuchsia-600 pt-32">
     <img
-     src="../assets/images/image-product-1.jpg"
+     :src="`/src/assets/images/${image}`"
      alt=""
      class="rounded-xl w-5/6 mx-auto"
     />
     <div class="w-5/6 -yellow-400 mx-auto flex mt-10">
      <img
-      src="../assets/images/image-product-1-thumbnail.jpg"
+      :src="`/src/assets/images/${image1}`"
       alt=""
       class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image1)"
      />
      <img
-      src="../assets/images/image-product-2-thumbnail.jpg"
+      :src="`/src/assets/images/${image2}`"
       alt=""
       class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image2)"
      />
      <img
-      src="../assets/images/image-product-3-thumbnail.jpg"
+      :src="`/src/assets/images/${image3}`"
       alt=""
       class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image3)"
      />
      <img
-      src="../assets/images/image-product-4-thumbnail.jpg"
+      :src="`/src/assets/images/${image4}`"
       alt=""
-      class="rounded-xl w-1/6 mx-auto"
+      class="rounded-xl w-1/6 mx-auto active"
+      @click="changeImage(image4)"
      />
     </div>
    </div>
@@ -96,6 +100,14 @@
   if (counter.value > 0) {
    counter.value--
   }
+ }
+ const image1 = "image-product-1.jpg"
+ const image2 = "image-product-2.jpg"
+ const image3 = "image-product-3.jpg"
+ const image4 = "image-product-4.jpg"
+ const image = ref(image1)
+ const changeImage = (img) => {
+  image.value = img
  }
 </script>
 

@@ -3,11 +3,35 @@
   <div class="w-9/12 -red-500 h-full m-auto flex">
    <!-- product images -->
    <div class="h-full w-1/2 -fuchsia-600 pt-32">
-    <div class="h-1/2 w-full -blue-500">
+    <img
+     :src="`/src/assets/images/${image}`"
+     alt=""
+     class="rounded-xl w-5/6 mx-auto"
+    />
+    <div class="w-5/6 -yellow-400 mx-auto flex mt-10">
      <img
-      :src="`../assets/images/${Image}`"
+      :src="`/src/assets/images/${image1}`"
       alt=""
-      class="h-full w-full object-cover"
+      class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image1)"
+     />
+     <img
+      :src="`/src/assets/images/${image2}`"
+      alt=""
+      class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image2)"
+     />
+     <img
+      :src="`/src/assets/images/${image3}`"
+      alt=""
+      class="rounded-xl w-1/6 mx-auto"
+      @click="changeImage(image3)"
+     />
+     <img
+      :src="`/src/assets/images/${image4}`"
+      alt=""
+      class="rounded-xl w-1/6 mx-auto active"
+      @click="changeImage(image4)"
      />
     </div>
    </div>
@@ -17,7 +41,7 @@
      <h3 class="text-amber-500 font-semibold tracking-wider">
       SNEAKER COMPANY
      </h3>
-     <h1 class="text-5xl font-bold mb-5"></h1>
+     <h1 class="text-5xl font-bold mb-5">Fall Limited Edition Sneakers</h1>
      <p class="text-gray-400 leading-loose">
       These low-profile sneakers are your perfect casual wear companion.
       Featuring a durable rubber outer sole, they’ll withstand everything the
@@ -67,9 +91,6 @@
 
 <script setup>
  import { Icon } from "@iconify/vue"
- import "vue3-carousel/dist/carousel.css"
- //  import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
-
  import { ref } from "vue"
  const counter = ref(0)
  const addCounter = () => {
@@ -80,7 +101,14 @@
    counter.value--
   }
  }
- const Image = "image-product-1.jpg"
+ const image1 = "image-product-1.jpg"
+ const image2 = "image-product-2.jpg"
+ const image3 = "image-product-3.jpg"
+ const image4 = "image-product-4.jpg"
+ const image = ref(image1)
+ const changeImage = (img) => {
+  image.value = img
+ }
 </script>
 
 <style lang="scss" scoped></style>
