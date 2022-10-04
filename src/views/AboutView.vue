@@ -29,6 +29,7 @@
    </div>
   </div>
  </section>
+ {{ products[0] }}
 </template>
 
 <script setup>
