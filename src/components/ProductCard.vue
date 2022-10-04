@@ -20,24 +20,36 @@
       />
      </button>
 
-     <img
-      :src="`/src/assets/images/${image2}`"
-      alt=""
-      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
-      @click="changeImage(image2)"
-     />
-     <img
-      :src="`/src/assets/images/${image3}`"
-      alt=""
-      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
-      @click="changeImage(image3)"
-     />
-     <img
-      :src="`/src/assets/images/${image4}`"
-      alt=""
-      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
-      @click="changeImage(image4)"
-     />
+     <button
+      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
+     >
+      <img
+       :src="`/src/assets/images/${image2}`"
+       alt=""
+       class="rounded-xl hover:opacity-50"
+       @click="changeImage(image2)"
+      />
+     </button>
+     <button
+      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
+     >
+      <img
+       :src="`/src/assets/images/${image3}`"
+       alt=""
+       class="rounded-xl hover:opacity-50"
+       @click="changeImage(image3)"
+      />
+     </button>
+     <button
+      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
+     >
+      <img
+       :src="`/src/assets/images/${image4}`"
+       alt=""
+       class="rounded-xl hover:opacity-50"
+       @click="changeImage(image4)"
+      />
+     </button>
     </div>
    </div>
 
