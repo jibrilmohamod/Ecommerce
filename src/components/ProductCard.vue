@@ -8,33 +8,39 @@
      alt=""
      class="rounded-xl w-5/6 mx-auto"
     />
-    <div class="w-5/6 -yellow-400 mx-auto flex mt-10">
-     <img
-      :src="`/src/assets/images/${image1}`"
-      alt=""
-      class="rounded-xl w-1/6 mx-auto"
-      @click="changeImage(image1)"
-     />
+    <div class="w-5/6 -yellow-400 mx-auto flex mt-10 border">
+     <button
+      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
+     >
+      <img
+       :src="`/src/assets/images/${image1}`"
+       alt=""
+       class="rounded-xl hover:opacity-50"
+       @click="changeImage(image1)"
+      />
+     </button>
+
      <img
       :src="`/src/assets/images/${image2}`"
       alt=""
-      class="rounded-xl w-1/6 mx-auto"
+      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
       @click="changeImage(image2)"
      />
      <img
       :src="`/src/assets/images/${image3}`"
       alt=""
-      class="rounded-xl w-1/6 mx-auto"
+      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
       @click="changeImage(image3)"
      />
      <img
       :src="`/src/assets/images/${image4}`"
       alt=""
-      class="rounded-xl w-1/6 mx-auto active"
+      class="rounded-xl w-1/6 mx-auto hover:opacity-50"
       @click="changeImage(image4)"
      />
     </div>
    </div>
+
    <!-- product info -->
    <div class="h-full w-1/2 -green-800 -2">
     <div class="w-3/4 m-auto flex flex-col justify-center h-full gap-6">
@@ -108,6 +114,11 @@
  const image = ref(image1)
  const changeImage = (img) => {
   image.value = img
+ }
+ //full screen image
+ const fullScreenImage = ref(false)
+ const toggleFullScreenImage = () => {
+  fullScreenImage.value = !fullScreenImage.value
  }
 </script>
 
