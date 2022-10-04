@@ -9,9 +9,7 @@
      class="rounded-xl w-5/6 mx-auto"
     />
     <div class="w-5/6 -yellow-400 mx-auto flex mt-10 border">
-     <button
-      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
-     >
+     <button class="rounded-xl w-1/6 mx-auto">
       <img
        :src="`/src/assets/images/${image1}`"
        alt=""
@@ -20,9 +18,7 @@
       />
      </button>
 
-     <button
-      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
-     >
+     <button class="rounded-xl w-1/6 mx-auto">
       <img
        :src="`/src/assets/images/${image2}`"
        alt=""
@@ -30,9 +26,7 @@
        @click="changeImage(image2)"
       />
      </button>
-     <button
-      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
-     >
+     <button class="rounded-xl w-1/6 mx-auto">
       <img
        :src="`/src/assets/images/${image3}`"
        alt=""
@@ -40,9 +34,7 @@
        @click="changeImage(image3)"
       />
      </button>
-     <button
-      class="rounded-xl w-1/6 mx-auto hover:border-2 hover:border-amber-500"
-     >
+     <button class="rounded-xl w-1/6 mx-auto">
       <img
        :src="`/src/assets/images/${image4}`"
        alt=""
@@ -128,10 +120,10 @@
   image.value = img
  }
  //full screen image
- const fullScreenImage = ref(false)
- const toggleFullScreenImage = () => {
-  fullScreenImage.value = !fullScreenImage.value
- }
+ //  const fullScreenImage = ref(false)
+ //  const toggleFullScreenImage = () => {
+ //   fullScreenImage.value = !fullScreenImage.value
+ //  }
 </script>
 
 <style lang="scss" scoped></style>
