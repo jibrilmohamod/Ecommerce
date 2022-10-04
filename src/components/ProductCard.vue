@@ -64,7 +64,7 @@
          class="text-orange-600 text-xl"
         />
        </button>
-       <h2 class="font-bold px-4">{{ counter }}</h2>
+       <h2 class="font-bold w-10 border text-center">{{ counter }}</h2>
        <button
         class="rounded-md w-10 h-10 flex items-center justify-center"
         @click="addCounter"
