@@ -3,13 +3,16 @@
   <div class="w-9/12 -red-500 h-full m-auto flex">
    <!-- product images -->
    <div class="h-full w-1/2 -fuchsia-600 pt-32">
-    <img src="" alt="" class="rounded-xl w-5/6 mx-auto" />
-    <select name="images" id="">
-     <option value="image-product-1.jpg">image-product-1.jpg</option>
-     <option value="image-product-2.jpg">image-product-2.jpg</option>
-     <option value="image-product-3.jpg">image-product-3.jpg</option>
-     <option value="image-product-4.jpg">image-product-4.jpg</option>
-    </select>
+    <carousel :items-to-show="1.5">
+     <slide v-for="slide in 5" :key="slide">
+      {{ slide }}
+     </slide>
+
+     <template #addons>
+      <navigation />
+      <pagination />
+     </template>
+    </carousel>
    </div>
    <!-- product info -->
    <div class="h-full w-1/2 -green-800 -2">
@@ -67,6 +70,9 @@
 
 <script setup>
  import { Icon } from "@iconify/vue"
+ import "vue3-carousel/dist/carousel.css"
+ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
+
  import { ref } from "vue"
  const counter = ref(0)
  const addCounter = () => {
