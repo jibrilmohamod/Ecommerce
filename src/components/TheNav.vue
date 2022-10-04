@@ -55,7 +55,7 @@
      </li>
      <!-- profile image -->
      <li class="ml-14">
-      <router-link to="/profile"
+      <router-link to=""
        ><img
         class="w-14 border h-14 rounded-full hover:border-orange-600 hover:border-2"
         src="../assets/images/image-avatar.png"
